@@ -30,21 +30,21 @@
     
     <div class="card-content">
       <h2>過去的研究</h2><br>
-      <img class="card-img-big" src="./projectIMG/thesis/ApexSpottingExistedMethod.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/ApexSpottingExistedMethod.png" alt="文章圖片">
       <h3>&emsp;&emsp;(1)透過資料集標籤或是Apex Spotting找到的Apex Frame進行情緒分析</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/ApexSopttingUseApexLabel.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/ApexSopttingUseApexLabel.png" alt="文章圖片">
       <h3>&emsp;&emsp;資料集標籤提供的Apex標籤多為人工,容易受標註者主觀意識影響，且多數沒有提供Apex標籤，如DAiSEE等</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/ApexSpotting1.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/ApexSpotting1.png" alt="文章圖片">
       <h3>&emsp;&emsp;特徵提取:透過每一幀與第一幀做比較，找出差距最大的值，那個幀就是Apex幀</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/FirstFrameNotNatural.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/FirstFrameNotNatural.png" alt="文章圖片">
       <h3>&emsp;&emsp;方法直接把第一幀當作沒有微表情幀(natural frame)，在封閉的實驗確實可以，但現實生活中影片不一定第一幀就是natural frame</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/ApexSpotting2-1.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/ApexSpotting2-1.png" alt="文章圖片">
       <h3>&emsp;&emsp;特徵提取+資料集標籤:透過資料集提供的onset幀到offset幀之間，做特徵提取把所有特徵質做平均</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/ApexSpotting2-2.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/ApexSpotting2-2.png" alt="文章圖片">
       <h3>&emsp;&emsp;特徵提取+資料集標籤:每一幀與平均值做比較，找出差距最大的值，那個幀就是Apex幀</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/ME_define.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/ME_define.png" alt="文章圖片">
       <h3>&emsp;&emsp;微表情定義</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/ApexSpotting2Error.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/ApexSpotting2Error.png" alt="文章圖片">
       <h3>&emsp;&emsp;造成的問題:如圖所示。第一幀（起始幀）和最後一幀（結束幀）與平均值的差距都是141，因此都會被判定為頂點幀，而這樣的結果違背了微表情的基本原理。由於微表情是一個動態變化的過程，頂點幀應該出現在表情變化的過程中，而不是在開始(onset)或結束時刻(offset)。且根據微表情的定義，起始幀代表表情開始變化的時刻，結束幀代表表情恢復平靜的時刻</h3>
       
     </div>
@@ -66,24 +66,24 @@
       <h3 style="text-align: left;">&emsp;&emsp;find:微表情Apex幀</h3>
       <h3 style="text-align: left;">&emsp;&emsp;such that:透過Apex幀找到情緒</h3><br>
 
-      <img class="card-img-big" src="./projectIMG/thesis/methodFrame.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/methodFrame.png" alt="文章圖片">
       <h3 >我們的方法流程圖</h3><br>
-      <img class="card-img-big" src="./projectIMG/thesis/methodSplitFace.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/methodSplitFace.png" alt="文章圖片">
       <h3 >臉部前處理: 用retinaFace提取特徵點</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/methodSplitFaceEq.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/methodSplitFaceEq.png" alt="文章圖片">
       <h3 >臉部前處理: 用特徵點分割圖片</h3><br>
-      <img class="card-img-big" src="./projectIMG/thesis/methodCalcLBP.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/methodCalcLBP.png" alt="文章圖片">
       <h3 >Apex frame範圍: 影片中，每兩幀根據特徵提取的值進行比較找出差距最大的兩個幀，作為Apex幀的候選幀</h3><br>
-      <img class="card-img-big" src="./projectIMG/thesis/methodApexCompareNatural.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/methodApexCompareNatural.png" alt="文章圖片">
       <h3 >找出Apex frame: 根據上圖，加上微表情的定義，我們知道Apex幀與平穩幀(Natural Frame)差距較大，Apex幀很少</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/methodNatrualCompareNatural.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/methodNatrualCompareNatural.png" alt="文章圖片">
       <h3 >找出Apex frame: 根據上圖，加上微表情的定義，我們知道平穩幀(Natural Frame)與平穩幀(Natural Frame)差距較小，而平穩幀很多</h3><br>
       <h3 >找出Apex frame: 根據上述，我們總結出一個方法；將候選的兩幀跟每一幀做比較，最後找出候選幀與其他差距最大的，候選幀即為Apex幀，以下為例子</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/methodFindApex1.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/methodFindApex1.png" alt="文章圖片">
       <h3 >Apex frame範圍: 根據圖上的例子，我們可以發現第六幀與第九幀差距最大</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/methodFindApex2.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/methodFindApex2.png" alt="文章圖片">
       <h3 >Apex frame範圍: 我們把第六幀與第九幀跟每一幀根據特徵提取的值進行比較找出差距</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/methodFindApex3.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/methodFindApex3.png" alt="文章圖片">
       <h3 >Apex frame範圍: 最後統計每一幀差距最大的幀，並找出最多的，就是我們的Apex幀。如圖示，第六幀為我們的Apex幀</h3>
 
     </div>
@@ -94,18 +94,18 @@
       <h2 >實驗</h2><br>
       <h3 style="text-align: left;">Dataset</h3>
       <h3 style="text-align: left;">&emsp;&emsp;多數資料集為提供Apex、Offset與Onset幀的標籤，所以選擇以下的資料集來測試我們的方法，並透過提取特定範圍的幀來模擬其他未提供微表情幀標籤的資料集。每個實驗為了準確性，會將30次的實驗結果作平均。</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/Dataset2.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/Dataset2.png" alt="文章圖片">
       <h3 >使用的資料集</h3><br>
-      <img class="card-img-big" src="./projectIMG/thesis/DatasetIMG.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/DatasetIMG.png" alt="文章圖片">
       <h3 >資料集是以圖片的方式儲存，每張圖片代表一個幀，例如一個1秒100幀的影片會有6000張圖片</h3><br>
       <h3 >一般資料集沒有提供onset跟offset幀的兩個標籤，如DAiSEE，所以我們根據這兩個標籤往前跟往後提取固定幀數來模擬其他資料集的狀況。且由於兩個資料集的幀數不同，我們採用不同的幀數提取各自的圖片，但實際時間都大約為1.2秒</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/SAMM2Video.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/SAMM2Video.png" alt="文章圖片">
       <h3 >SAMM的資料集:透過資料集提供的標籤，往前往後各提取250幀，作為實驗的影片</h3><br>
-      <img class="card-img-big" src="./projectIMG/thesis/SMIC2Video.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/SMIC2Video.png" alt="文章圖片">
       <h3 >SMIC_HS的資料集:透過資料集提供的標籤，往前往後各提取120幀，作為實驗的影片</h3><br>
-      <img class="card-img-big" src="./projectIMG/thesis/SAMMExp.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/SAMMExp.png" alt="文章圖片">
       <h3 >SAMM的的實驗結果: 根據上圖，我們的方法優於其他方法，但是Cube-LBP的實驗結果與我們很接近，且時間更少</h3>
-      <img class="card-img-big" src="./projectIMG/thesis/SMIC_HSEXP.png" alt="文章圖片">
+      <img class="card-img-big" src="./projectIMG/Thesis/SMIC_HSEXP.png" alt="文章圖片">
       <h3 >SMIC的實驗結果: 根據上圖，我們的方法依舊優於其他方法，而Cube-LBP的方法的正確率則明顯的下降，兩個資料集的差別主要在幀數，而Cube-LBP根據前後幀提取時空特徵，幀數減少導致正確率下降</h3><br>
 
     </div>
