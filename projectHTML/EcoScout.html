@@ -1,0 +1,92 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="./b.css">
+    <script src="../GlitchNow.js"></script>
+</head>
+<body>
+
+  <nav>
+    <div><strong>專題報告</strong></div>
+    <div>
+      <a href="../project.html">首頁</a>
+      <a href="../about.html">關於我</a>
+      <!--<a href="#"></a>-->
+    </div>
+  </nav>
+
+  <div class="card-title">
+    <!--<img class="card-img" src="../IMG/123.jpg" alt="文章圖片">-->
+    <div class="card-content">
+      <h2>LoRa 長距離無線通訊技術之應用:以 EcoScout環境數據採集器之實作為例</h2>
+      
+      <!--<a href="#" class="button">Github</a>-->
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <h2>簡介</h2>
+      <h3>&emsp;&emsp;在這個由數據組成的時代，所有的分析都需要大量數據的收集，但在一些極端氣候或者危險環境的地方，例如車諾普、張家界……等，假設人類要長期在當地架設檢測站收集數據，不僅耗時耗力，還很危險，更有可能因為交通不便造成物資不便傳輸或使其與外界失聯，而這個時候如果有一個機器可以替你收集環境資料並將期都回傳到主機，那一定會使人類更有效的了解不同環境的生態。<br>&emsp;&emsp;EcoScout 上部署了很多傳感器和任務，包括溫濕度傳感器、亮度傳感器、土壤傳感器等。 除了部署很多傳感器感知環境之外，並使用 LoRA 作為傳輸的媒介，並外加電源使其在野外可以無網路的情況下傳輸。<br>&emsp;&emsp;在野外或危險環境中收集環境數據必須面臨一個非常重要的問題，那就是能源消耗。因此，我們使用 meCreate 作為開發平台。除了更高效的部署之外，meCreate 還可以根據能源關鍵程度將任務分成多個版本，並在必要時切換到省電版本。高能量關鍵版本中任務的 WCET 低於低能量關鍵任務版本，因此 CPU 可以獲得更多空閒時間。當 CPU 獲得更多空閒時間時，meCreate 會降低 CPU 頻率以節省電量。在這個過程中，meCreate 仍然會確保工作不會錯過截止日期。
+</h3>
+    </div>
+  </div>
+  <div class="card">
+    
+    <div class="card-content">
+      <h2 >開發環境</h2>
+      <h3>客戶端:採用樹梅派加上多個傳感器，外加上一個LoRA，一個負責發送訊息到伺服器端</h3>
+      <h3>伺服器端:採用樹梅派架設LAMP伺服器負責接收訊息</h3>
+      <img class="card-img-big" src="./projectIMG/EcoScout/EcoScoutConcept.png" alt="文章圖片">
+    </div>
+  </div>
+<div class="card">
+    <div class="card-content">
+      <h2 >在專題的製作過程中，多多少少都會遭遇到一些問題，不管事技術層面，或者是應用上。以下列出幾點問題：</h2>
+      <h3 >&emsp;&emsp;1.對於樹梅派開發環境的不熟悉 </h3>
+      <h4 >&emsp;&emsp;&emsp;&emsp;網路資訊查詢或尋求學長協助</h4>
+      <h3 >&emsp;&emsp;2.硬體設備上的需求</h3>
+      <h4 >&emsp;&emsp;&emsp;&emsp;尋求指導老師幫忙或善用學校原有設備</h4>
+      <h3 >&emsp;&emsp;3.對於 UART、SPI、I2C 等接口連接</h3>
+      <h4 >&emsp;&emsp;&emsp;&emsp;在系統檔內修改或網路資訊查詢</h4>
+
+      <h3 >&emsp;&emsp;4.戶外的供電方式</h3>  
+      <h4 >&emsp;&emsp;&emsp;&emsp;多個電池並聯</h4>
+
+      <h3 >&emsp;&emsp;5.點對點的資料傳輸</h3> 
+      <h4 >&emsp;&emsp;&emsp;&emsp;使用 LORA 這種低功耗、遠距離的傳輸方式，使主機可以獲取資訊。</h4>
+
+      <h3 >&emsp;&emsp;6.Pi4 容易熱當</h3>
+      <h4 >&emsp;&emsp;&emsp;&emsp;加入風扇</h4>
+
+      <h3 >&emsp;&emsp;7.如何展示結果</h3>
+      <h4 >&emsp;&emsp;&emsp;&emsp;利用 LAMP 架設網站</h4>
+
+    </div>
+  </div>
+  <div class="card-conclude">
+    <div class="card-content">
+      <h2 >EcoScout架構圖</h2><br>
+      <img class="card-img-big" src="./projectIMG/EcoScout/EcoScoutFrame.png" alt="文章圖片">
+      <h3 >(1)主架構</h3>
+      <img class="card-img-big" src="./projectIMG/EcoScout/EcoScoutLoRA.png" alt="文章圖片">
+      <h3 >(2)LoRA傳輸</h3>
+      <img class="card-img-big" src="./projectIMG/EcoScout/EcoScoutServer.png" alt="文章圖片">
+      <h3 >(3)伺服器端(LAMP)</h3>
+      <img class="card-img-big" src="./projectIMG/EcoScout/EcoScoutClient.png" alt="文章圖片">
+      <h3 >(4)客戶端</h3>
+    </div>
+  </div>
+  <div class="card-conclude">
+    <div class="card-content">
+      <h2 >EcoScout實行結果</h2><br>
+      <img class="card-img-big" src="./projectIMG/EcoScout/EcoScoutServerRun.png" alt="文章圖片">
+      <h3 >(1-1)伺服器端的運行畫面</h3>
+      <img class="card-img-big" src="./projectIMG/EcoScout/EcoScoutServerWebsite.png" alt="文章圖片">
+      <h3 >(1-2)伺服器端的網站</h3>
+      <img class="card-img-big" src="./projectIMG/EcoScout/EcoScoutServerChart.png" alt="文章圖片">
+      <h3 >(1-3)伺服器端產生的圖表</h3>
+      <img class="card-img-big" src="./projectIMG/EcoScout/EcoScoutClientRun.png" alt="文章圖片">
+      <h3 >(2)客戶端運行畫面</h3>
+    </div>
+  </div>
+</body>
+
+

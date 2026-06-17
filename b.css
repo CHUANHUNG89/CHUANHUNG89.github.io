@@ -1,0 +1,148 @@
+/* 基礎設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  color: #333;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* 導覽列 */
+nav {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #3498db;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+  gap: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-content h2 {
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.card-content p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* 交錯排列 - 反轉順序 */
+.card-reverse {
+  flex-direction: row-reverse;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+  gap: 1.5rem;
+}
+
+/* 按鈕樣式 */
+.button {
+  display: inline-block;
+  background-color: rgba(52, 152, 219, 0.8);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(41, 128, 185, 0.9);
+  transform: scale(1.05);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card,
+  .card-reverse {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .card-content {
+    margin-top: 1rem;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}

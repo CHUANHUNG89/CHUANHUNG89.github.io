@@ -1,0 +1,60 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="./b.css">
+    <script src="./js/DateSelector.js" charset="utf-8"></script>
+</head>
+<body>
+
+  <nav>
+    <div><strong>DateSelector</strong></div>
+    <div>
+      <a href="../project.html">首頁</a>
+      <a href="../about.html">關於我</a>
+      <!--<a href="#"></a>-->
+    </div>
+  </nav>
+
+  <div class="card-title">
+    
+    <div class="card-content">
+      <h2>日期選擇器</h2>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <h2>簡介</h2>
+      <h3>&emsp;&emsp;這個主要是要練習JavaScript，程式的目的就是要能夠動態的根據判斷是否為閏年，在選擇月份時，動態生成下拉式選單。例如2024年的2月就會生成一個1號到29號的下拉式選單，而2025的2月則是生成到28號的下拉式選單。</h3>
+    </div>
+  </div>
+  <div class="card">
+    
+    <div class="card-content">
+      <h2 >程式語言</h2>
+      <h3>JavaScript</h3>
+    </div>
+  </div>
+<div class="card">
+    
+    <div class="card-content">
+      <h2 >在過程中主要遇到的問題有:</h2>
+      <h3 >&emsp;&emsp;1.閏月判定</h3>
+      <h4 >&emsp;&emsp;&emsp;&emsp;根據閏月規定:除以 4 能整除，且除以 100 不能整除，如果剛好是 100 的倍數，且除以 400 能整除。</h4>
+      <h4 >&emsp;&emsp;&emsp;&emsp;得出判斷式((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) ? true : false 以此判斷是否為閏年。</h4>
+      <h3 >&emsp;&emsp;2.根據年份判斷是否閏月，再加上月份的判斷動態調整日期的下拉式選單</h3>
+      <h4 >&emsp;&emsp;&emsp;&emsp;透過onchange()來改變日期的選單。</h4>
+    </div>
+  </div>
+<div class="card-conclude">
+    
+    <div class="card-content">
+      <h2 >成果展示</h2><br>
+      <div class="DateSelector tw-single">
+      </div>
+      <br>
+      <div class="DateSelector tw-start">
+      </div>
+      <div class="DateSelector tw-end">
+      </div>
+    </div>
+  </div>
+
+</body>

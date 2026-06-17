@@ -1,0 +1,73 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="./b.css">
+    
+</head>
+<body>
+
+  <nav>
+    <div><strong>線上漫畫翻譯器</strong></div>
+    <div>
+      <a href="../project.html">首頁</a>
+      <a href="../about.html">關於我</a>
+      <!--<a href="#"></a>-->
+    </div>
+  </nav>
+
+  <div class="card-title">
+    <!--<img class="card-img" src="../IMG/123.jpg" alt="文章圖片">-->
+    <div class="card-content">
+      <h2>線上漫畫翻譯器</h2>
+      
+      <!--<a href="#" class="button">Github</a>-->
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <h2>簡介</h2>
+      <h3>&emsp;&emsp;我個人喜歡在閒暇的時候看漫畫或是小說，而看漫畫時常常會遇到原文看不懂，例如日文，而現有的軟體大多有支援網頁直接翻譯的，通常免費的都有限制翻譯的頁數，常常看到正覺得有趣的地方，額度就到了。而且翻譯軟體還沒辦法自己選擇，造成翻譯看起來很不合理的情況。而github的漫畫翻譯器大多需要把漫畫下載下來如: hgmzhn/manga-translator-ui或是dmMaze/BallonsTranslator都是要從網路手動把漫畫下載下來。所以我希望能透過寫程式來達到當我連到漫畫的網頁時，在背景自動翻譯漫畫內容，提升觀看的體驗。</h3>
+    </div>
+  </div>
+  <div class="card">
+    
+    <div class="card-content">
+      <h2 >程式主架構為</h2>
+      <h4>&emsp;&emsp;1.獲取網頁所有的圖片</h4>
+      <h4>&emsp;&emsp;2.將獲取的圖片傳入伺服器</h4>
+      <h4>&emsp;&emsp;3.提取圖片中的所有文字</h4>
+      <h4>&emsp;&emsp;4.針對文字進行翻譯</h4>
+      <h4>&emsp;&emsp;5.把圖片上的文字消除</h4>
+      <h4>&emsp;&emsp;6.把翻譯後的文字替代上去</h4>
+      <h4>&emsp;&emsp;7.把翻譯完成的圖片回傳到網頁放覆蓋原本的圖片</h4>
+    </div>
+  </div>
+<div class="card">
+    <!--<img class="card-img" src="./projectIMG/RacingHorsesMain.png" alt="文章圖片">-->
+    <div class="card-content">
+      <h2 >在過程中主要遇到的問題有:</h2>
+      <h3 >&emsp;&emsp;1.如何獲取網頁所有圖片與覆蓋</h3>
+      <h4 >&emsp;&emsp;&emsp;&emsp;使用tampermonkey跑一個JS腳本，先抓取所有圖片，傳入伺服器等待回應，再把伺服器處理完的圖片替代原本的圖片</h4>
+      <h3 >&emsp;&emsp;2.伺服器的環境問題</h3>
+      <h4 >&emsp;&emsp;&emsp;&emsp;為了避免不同電腦，造成環境問題，我使用Podman架設伺服器，而使用GPU則需要照官網的操作設定</h4>
+      <h3 >&emsp;&emsp;3.API</h3>
+      <h4 >&emsp;&emsp;&emsp;&emsp;採用Gradio 4.44.0 版本做API</h4>
+      <h3 >&emsp;&emsp;4.提取圖片中的文字</h3>
+      <h4 >&emsp;&emsp;&emsp;&emsp;提取文字需要先鎖定一個區塊，然後再做OCR提取文字正確率才會比較高。目前先決定以日文翻譯繁體中文，所以選擇dmMaze/comic-text-detector+MangaOCR去提取日文</h4>
+      <h3 >&emsp;&emsp;5.翻譯原文</h3>
+      <h4 >&emsp;&emsp;&emsp;&emsp;SakuraLLM在翻譯漫畫的部分相較其他翻譯模型更合理，但是翻譯出來都是大陸用語與簡體字會看得不太習慣，所以加上OpenCC來解決這個問題</h4>
+
+    </div>
+  </div>
+<div class="card-conclude">
+    
+    <div class="card-content">
+      <h2 >成果展示</h2><br>
+      <img class="card-img-big" src="./projectIMG/MangaTranslater/MangaOringin.png" alt="文章圖片">
+      <h3 >(1)未經翻譯的漫畫</h3>
+      <img class="card-img-big" src="./projectIMG/MangaTranslater/MangaTranslated.png" alt="文章圖片">
+      <h3 >(2)翻譯過後的漫畫</h3>
+      <img class="card-img-big" src="./projectIMG/MangaTranslater/MangaTranslterServer.png" alt="文章圖片">
+      <h3 >(2)伺服器端工作畫面</h3>
+    </div>
+  </div>
+
+</body>
